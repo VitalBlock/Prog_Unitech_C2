@@ -1,0 +1,50 @@
+body {
+    background-color: rgb(164, 217, 241);
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+}
+h1 {
+    font-size: 2em;
+    text-align: center;
+}
+a {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    color: black;
+    font-size: 20px;
+}
+div {
+    background-color: chartreuse;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 300px;
+    display: inline-block;
+}
+#tabla {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: blueviolet;
+}
+th{
+    background-color: blue;
+    color: aliceblue;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+.parrafo{
+    background-color: rgb(255, 255, 0);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 300px;
+    display: inline-block;
+}
