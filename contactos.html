@@ -6,6 +6,68 @@
     <title>Página de Contactos</title>
 </head>
 <body>
-    
+    <center>
+    Digite un Numero de Contacto:
+    <input type="text" id="contacto" placeholder="Ingrese el número de contacto">
+    <button onclick="agregarContacto()">Agregar Contacto</button>
+    <br>
+    <br>
+    <label for="fecha">Digite fecha de Nacimiento</label>
+    <input type="date" name="fecha" id="fecha">
+    <br>
+    <br>
+    <label for="">Digite Mes</label>
+    <input type="month" name="mes" id="mes">
+    <br>
+    <br>
+    <label for="hora">Digite Hora</label>
+    <input type="time" name="hora" id="hora">
+    <br>
+    <br>
+    <label for="psw">Digite contraseña</label>
+    <input type="password" name="psw" id="psw">
+    <br>
+    <br>
+    <label for="color">Seleccione un color</label>
+    <input type="color" name="color" id="color">
+    <br>
+    <br>
+    <input type="checkbox" name="res" id="res"> 
+    <label for="res">Acepto los terminos y condiciones</label>
+    <br>
+    <br>
+    <fieldset>
+    <input type="radio" name="sexo" id="masculino" value="masculino" checked>
+    <label for="masculino">Masculino</label>
+    <br>
+    <input type="radio" name="sexo" id="femenino" value="femenino">
+    <label for="femenino">Femenino</label>
+    <br>
+    <input type="radio" name="sexo" id="otro" value="otro">
+    <label for="otro">Otro</label>
+    </fieldset>
+    <br>
+    <br>
+    <label for="comentario">Comentarios</label>
+    <br>
+    <textarea name="comentario" id="comentario" cols="30" rows="10"></textarea>
+    <h2>Lista de Contactos</h2>
+    <table id="tabla" border="3" cellpadding="5" cellspacing="0">
+     <th>Contactos</th>
+     <tbody id="curpo">
+
+     </tbody>
+    </table>
+</center>
 </body>
+ <script>
+     var salida='';
+    function agregarContacto() {
+        var contacto = document.getElementById("contacto").value;
+        salida+='<tr><td>'+contacto+'</td></tr>';
+        document.getElementById("curpo").innerHTML=salida;
+        document.getElementById("contacto").value='';
+        document.getElementById("contacto").focus();
+    }
+ </script>
 </html>
