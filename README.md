@@ -1,6 +1,6 @@
-# Prog_Unitec_C2
-Almacenar ejercicios de programación exploratorio TecnoTech
-# Introductorio Programacion con JavaScript
-## Definicion de variables
-### Una variable es el nombre que asignamos a un espacio de memoria donde se va a almacenar un dato. Los datos pueden cambiar en el transcurso de la ejecucion del programa
-### Las constantes es un espacio de memoria que se le asigna un nombre para armacenar un dato que nunca cambia durante la ejecucion del programa 
+# progUnitec_c2
+Almacenar Los Ejercicios de Programación Exploratorio TecnoTech
+# Introdutorio Programación Con JavaScript
+## Definición de Variables
+### Una Variables es el nombre que asignamos aun espacio de memoria donde se va a almacenar un dato. En los datos pueden cambiar en el trascurso de la ejecución del programa
+### Las Constantes es un espacio de memoria que se le asigna un nombre para almacenar un dato que nunca cambia durante la ejecución del programa
