@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion Datos Persona</title>
+    <link rel="stylesheet" href="stylo.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="contactos.html">Contactos</a></li>
+            <li><a href="#">Galería</a></li>
+            <li><a href="ejForm.html">Formulario</a></li>
+            <li><a href="ej1javascript.html">Ejercicios Java Script</a></li>
+            <li><a href="gestionPersona.html">Gestion Persona</a></li>
+        </ul>
+    </nav>
+    <h1 style="text-align: center; color:rgb(255, 0, 85)"><b>Gestion Datos Persona</b></h1>
+    <hr noshade="noshade" size="10" color="green" align="center" width="50%">
+    <br>
+    <table border="3" align="center" width="50%" cellpadding="10" cellspacing="0">
+        <tr>
+            <th>Propiedad</th>
+            <th>Valor</th>
+        </tr>
+        <tbody>
+            <tr>
+                <td>Cédula</td>
+                <td><input type="text" name="ced" id="ced" placeholder="Digite Cédula"></td>
+            </tr>
+            <tr>
+                <td>Nombres</td>
+                <td><input type="text" name="nom" id="nom" placeholder="Digite Nombres"></td>
+            </tr>
+            <tr>
+                <td>Apellidos</td>
+                <td><input type="text" name="ape" id="ape" placeholder="Digite Apellidos"></td>
+            </tr>
+            <tr>
+                <td>Dirección</td>
+                <td><input type="text" name="dir" id="dir" placeholder="Digite Dirección"></td>
+            </tr>
+            <tr>
+                <td>Teléfono</td>
+                <td><input type="text" name="tel" id="tel" placeholder="Digite Teléfono"></td>      
+            </tr>
+            <tr>
+                <td>Correo</td>
+                <td><input type="email" name="cor" id="cor" placeholder="Digite Correo"></td>
+            </tr>
+        </tbody>
+    </table>
+    <table border="3" align="center" width="50%" cellpadding="10" cellspacing="0">
+        <tr>
+            <td>
+                <button id="grd" onclick="guardarDatos()">Guardar</button>
+                <button  id="act" onclick="actualizarDatos()">Actualizar</button>
+            </td>
+        </tr>
+    </table>
+</body>
+<br>
+<h2>Listado de Clientes</h2>
+<table border="3" align="center" width="50%" cellpadding="10" cellspacing="0" id="listado">
+    <tr>
+        <th>Cédula</th>
+        <th>Nombres</th>
+        <th>Apellidos</th>
+        <th>Dirección</th>
+        <th>Teléfono</th>
+        <th>Correo</th>
+        <th>Accción</th>
+    </tr>
+    <tbody id="cuerpoTabla"></tbody>
+</table>
+
+    <script src="gestionPersona.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Java Script</title>
+    <link rel="stylesheet" href="stylo.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="contactos.html">Contactos</a></li>
+            <li><a href="#">Galería</a></li>
+            <li><a href="ejForm.html">Formulario</a></li>
+            <li><a href="ej1javascript.html">Ejercicios Java Script</a></li>
+            <li><a href="gestionPersona.html">Gestion Persona</a></li>
+        </ul>
+    </nav>
+    <h1 style="text-align: center; color:rgb(255, 0, 85)"><b>Ejercicios Java Script</b></h1>
+    <hr noshade="noshade" size="10" color="green" align="center" width="50%">
+    <br>
+    <center>
+        <table border="3">
+            <th>Lista Numeros del Arreglo</th>
+            <tbody id="cuerpo">
+
+            </tbody>
+        </table>
+    </center>
+
+
+
+
+
+
+<script>
+    var myArrayNumeros=[8,-3,5,7,120,16,40,-8];
+    //cuantos elementos tiene el arreglo
+    //alert(myArrayNumeros.length);
+    var salida='';
+    var sum=0; //variable para almacenar la suma de los elementos del arreglo
+    var promedio=0; //variable para almacenar el promedio de los elementos del arreglo
+    for (var i=0; i<myArrayNumeros.length; i++){ //ciclo for para iterar en el arrglo casilla por casilla
+       salida+='<tr><td>'+myArrayNumeros[i]+'</td><td>'
+        +Math.pow(myArrayNumeros[i],2)//concatenar el valor de cada casilla elevado al cuadrado del arreglo en una variable salida
+        +'</td></tr>'; //concatenar el valor de cada casilla del arreglo en una variable salida
+         sum+=myArrayNumeros[i]; //sumar el valor de cada casilla del arreglo a la variable sum
+    }
+    promedio=sum/myArrayNumeros.length; //calcular el promedio de los elementos del arreglo
+    salida+='<tr><td>La suma de los elementos del arreglo es: '+sum+'</td></tr>'; //concatenar el valor de la variable sum a la variable salida
+    salida+='<tr><td>El promedio de los elementos del arreglo es: '+promedio+'</td></tr>'; //concatenar el valor de la variable promedio a la variable salida
+
+
+    //Salert(salida); //alerta para mostrar el resultado de la variable salida
+    document.getElementById('cuerpo').innerHTML=salida; //asignar el valor de la variable salida al cuerpo de la tabla
+</script>
+
+</body>
+</html>
