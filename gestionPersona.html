@@ -63,20 +63,38 @@
     <table border="3" align="center" width="50%" cellpadding="10" cellspacing="0">
         <tr><th>Propiedad</th><th>Valor</th></tr>
         <tbody>
-            <tr><td>Cédula</td><td><input type="text" id="ced" placeholder="Digite Cédula"></td></tr>
-            <tr><td>Nombres</td><td><input type="text" id="nom" placeholder="Digite Nombres"></td></tr>
-            <tr><td>Apellidos</td><td><input type="text" id="ape" placeholder="Digite Apellidos"></td></tr>
-            <tr><td>Dirección</td><td><input type="text" id="dir" placeholder="Digite Dirección"></td></tr>
-            <tr><td>Teléfono</td><td><input type="text" id="tel" placeholder="Digite Teléfono"></td></tr>
-            <tr><td>Correo</td><td><input type="email" id="cor" placeholder="Digite Correo"></td></tr>
+            <tr>
+                <td>🆔 Cédula</td>
+                <td><input type="text" id="ced" placeholder="Digite Cédula" style="padding:12px; margin:10px 0; width:95%; border:none; border-radius:10px; font-size:16px; background-color:#f1f1f1; box-shadow:inset 2px 2px 5px rgba(0,0,0,0.1); transition:all 0.3s ease;"></td>
+            </tr>
+            <tr>
+                <td>👤 Nombres</td>
+                <td><input type="text" id="nom" placeholder="Digite Nombres" style="padding:12px; margin:10px 0; width:95%; border:none; border-radius:10px; font-size:16px; background-color:#f1f1f1; box-shadow:inset 2px 2px 5px rgba(0,0,0,0.1); transition:all 0.3s ease;"></td>
+            </tr>
+            <tr>
+                <td>👥 Apellidos</td>
+                <td><input type="text" id="ape" placeholder="Digite Apellidos" style="padding:12px; margin:10px 0; width:95%; border:none; border-radius:10px; font-size:16px; background-color:#f1f1f1; box-shadow:inset 2px 2px 5px rgba(0,0,0,0.1); transition:all 0.3s ease;"></td>
+            </tr>
+            <tr>
+                <td>🏠 Dirección</td>
+                <td><input type="text" id="dir" placeholder="Digite Dirección" style="padding:12px; margin:10px 0; width:95%; border:none; border-radius:10px; font-size:16px; background-color:#f1f1f1; box-shadow:inset 2px 2px 5px rgba(0,0,0,0.1); transition:all 0.3s ease;"></td>
+            </tr>
+            <tr>
+                <td>📞 Teléfono</td>
+                <td><input type="text" id="tel" placeholder="Digite Teléfono" style="padding:12px; margin:10px 0; width:95%; border:none; border-radius:10px; font-size:16px; background-color:#f1f1f1; box-shadow:inset 2px 2px 5px rgba(0,0,0,0.1); transition:all 0.3s ease;"></td>
+            </tr>
+            <tr>
+                <td>📧 Correo</td>
+                <td><input type="email" id="cor" placeholder="Digite Correo" style="padding:12px; margin:10px 0; width:95%; border:none; border-radius:10px; font-size:16px; background-color:#f1f1f1; box-shadow:inset 2px 2px 5px rgba(0,0,0,0.1); transition:all 0.3s ease;"></td>
+            </tr>
         </tbody>
     </table>
-
+    
     <table border="3" align="center" width="50%" cellpadding="10" cellspacing="0">
         <tr>
             <td id="botones" style="text-align: center;">
-                <button id="grd" onclick="guardarDatos()">Guardar</button>
-                <button id="act" onclick="actualizarDatos()" style="display: none;">Actualizar</button>
+                <button id="grd" onclick="guardarDatos()" style="padding:10px 20px; background-color:#4CAF50; color:white; border:none; border-radius:10px; font-size:16px; cursor:pointer; transition:background-color 0.3s ease;">Guardar</button>
+                <button id="act" onclick="actualizarDatos()" style="display: none; padding:10px 20px; background-color:#2196F3; color:white; border:none; border-radius:10px; font-size:16px; cursor:pointer; transition:background-color 0.3s ease;">Actualizar</button>
             </td>
         </tr>
     </table>
