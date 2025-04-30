@@ -1,5 +1,14 @@
 var myArray = [];
 
+// Cargar datos desde localStorage al iniciar
+window.onload = function () {
+    const datosGuardados = localStorage.getItem('personas');
+    if (datosGuardados) {
+        myArray = JSON.parse(datosGuardados);
+        mostrarDatos();
+    }
+};
+
 function guardarDatos() {
     const objPersona = {
         ced: document.getElementById('ced').value,
@@ -10,7 +19,7 @@ function guardarDatos() {
         email: document.getElementById('cor').value
     };
     myArray.push(objPersona);
-    console.log(myArray);
+    guardarEnLocalStorage();
     limpiarCajas();
     mostrarDatos();
 }
@@ -44,7 +53,7 @@ function limpiarCajas() {
     document.getElementById('ced').focus();
 }
 
-function editarDatos(index){
+function editarDatos(index) {
     let persona = myArray[index];
     document.getElementById('ced').value = persona.ced;
     document.getElementById('nom').value = persona.nom;
@@ -55,11 +64,10 @@ function editarDatos(index){
 
     document.getElementById('grd').style.display = 'none';
     document.getElementById('act').style.display = 'inline-block';
-    // Guardamos el índice que se va a actualizar
     document.getElementById('act').dataset.index = index;
 }
 
-function actualizarDatos(){
+function actualizarDatos() {
     let index = document.getElementById('act').dataset.index;
     myArray[index] = {
         ced: document.getElementById('ced').value,
@@ -69,7 +77,7 @@ function actualizarDatos(){
         tel: document.getElementById('tel').value,
         email: document.getElementById('cor').value
     };
-
+    guardarEnLocalStorage();
     limpiarCajas();
     mostrarDatos();
     document.getElementById('grd').style.display = 'inline-block';
@@ -80,6 +88,7 @@ function eliminarSeleccionado() {
     const index = document.getElementById('eliminarSeleccionado').getAttribute('data-index');
     if (confirm("¿Deseas eliminar esta persona?")) {
         myArray.splice(index, 1);
+        guardarEnLocalStorage();
         limpiarCajas();
         mostrarDatos();
         document.getElementById('acciones').style.display = 'none';
@@ -90,6 +99,11 @@ function eliminarSeleccionado() {
 function eliminarDatos(index) {
     if (confirm("¿Deseas eliminar esta persona?")) {
         myArray.splice(index, 1);
+        guardarEnLocalStorage();
         mostrarDatos();
     }
+}
+
+function guardarEnLocalStorage() {
+    localStorage.setItem('personas', JSON.stringify(myArray));
 }

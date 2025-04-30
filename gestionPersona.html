@@ -5,6 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestión Datos Persona</title>
     <link rel="stylesheet" href="stylo.css">
+
+    <style>
+        button {
+            background-color: #28a745; /* Verde bonito para Guardar */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 5px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        #act {
+            background-color: #007bff; /* Azul para Actualizar */
+        }
+
+        #act:hover {
+            background-color: #0069d9;
+        }
+
+        .ancho {
+            padding: 8px 16px;
+            font-size: 14px;
+            border-radius: 6px;
+            margin: 2px;
+            background-color: #ffc107;
+            color: black;
+        }
+
+        .ancho:hover {
+            background-color: #e0a800;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -35,7 +74,7 @@
 
     <table border="3" align="center" width="50%" cellpadding="10" cellspacing="0">
         <tr>
-            <td id="botones">
+            <td id="botones" style="text-align: center;">
                 <button id="grd" onclick="guardarDatos()">Guardar</button>
                 <button id="act" onclick="actualizarDatos()" style="display: none;">Actualizar</button>
             </td>
