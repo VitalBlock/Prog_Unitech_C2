@@ -26,8 +26,8 @@ function mostrarDatos() {
             <td>${persona.tel}</td>
             <td>${persona.email}</td>
             <td>
-                <button onclick="editarDatos(${index})">Editar</button>
-                <button onclick="eliminarDatos(${index})">Eliminar</button>
+                <button class="ancho" onclick="editarDatos(${index})">Editar</button>
+                <button class="ancho" onclick="eliminarDatos(${index})">Eliminar</button>
             </td>
         </tr>`;
     });
